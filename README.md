@@ -1,6 +1,6 @@
 # fshare2gdrive
 NodeJS script for direct uploading from FShare.vn to Google Drive without storing files locally.
-> For deprecated bash script (download.sh and login.sh), please see [here](https://github.com/duythongle/fshare2gdrive/blob/0cead7f9229fe6e54b2e9e81add0f6da4bdf453b/README.md).
+> For deprecated bash script (download.sh and login.sh), please see [here](https://github.com/tuandaica225/fshare2gdrive/blob/0cead7f9229fe6e54b2e9e81add0f6da4bdf453b/README.md).
 
 ## Features
 
@@ -43,7 +43,7 @@ sudo apt install -y nodejs
 
 ``` bash
 # Login FShare
-curl -sS https://raw.githubusercontent.com/duythongle/fshare2gdrive/master/fshare2gdrive.js | \
+curl -sS https://raw.githubusercontent.com/tuandaica225/fshare2gdrive/master/fshare2gdrive.js | \
 tail -n+2 | node - login "your_fshare_email" "your_fshare_password"
 
 ```
@@ -52,7 +52,7 @@ tail -n+2 | node - login "your_fshare_email" "your_fshare_password"
 2. Download single FShare FILE to GDrive
 
 ``` bash
-curl -sS https://raw.githubusercontent.com/duythongle/fshare2gdrive/master/fshare2gdrive.js | \
+curl -sS https://raw.githubusercontent.com/tuandaica225/fshare2gdrive/master/fshare2gdrive.js | \
 tail -n+2 | node - "<fshare_file_url>" "<rclone_remote_name>" "<remote_folder_path>" | bash -s
 
 ```
@@ -69,7 +69,7 @@ E.g:
 ``` bash
 # the command below will download "https://www.fshare.vn/file/XXXXXXXXXXX"
 # and pipe upload to "rclone rcat gdrive-remote:/RClone Upload/"
-curl -sS https://raw.githubusercontent.com/duythongle/fshare2gdrive/master/fshare2gdrive.js | \
+curl -sS https://raw.githubusercontent.com/tuandaica225/fshare2gdrive/master/fshare2gdrive.js | \
 tail -n+2 | node - "https://www.fshare.vn/file/XXXXXXXXXXX" "gdrive-remote" "/RClone Upload/"
 ```
 
